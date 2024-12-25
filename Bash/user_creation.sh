@@ -1,4 +1,5 @@
 #!/bin/bash
+# Creates a user with private group as primary, with optional secondary
 
 group_exists() {
   getent group "$1" > /dev/null 2>&1
