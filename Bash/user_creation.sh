@@ -9,6 +9,8 @@ user_exists() {
   getent passwd "$1" > /dev/null 2>&1
 }
 
+
+
 read -p "Enter the username: " username
 
 # Check if user already exists
