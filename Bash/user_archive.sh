@@ -2,8 +2,6 @@
 # Searches system for user files and archives them to /tmp/
 
 
-
-
 read -p "Enter the username: " username
 
 # Check if the user exists
