@@ -22,12 +22,11 @@ elif key_type == '3':
     key_type = 'ed25519'
     key_bits = ''
 
-# Ask for the key file location
+# key file location
 file_path = input(f"Enter the file path to save the key (or press enter to use default ~/.ssh/id_{key_type}): ")
 if not file_path:
     file_path = os.path.expanduser(f"~/.ssh/id_{key_type}")
 
-# Ask for passphrase (optional)
 passphrase = input("Enter a passphrase or Press enter: ")
 
 # Prepare ssh-keygen command
@@ -39,7 +38,6 @@ if passphrase:
 else:
     command += ['-N', '']
 
-# Generate the SSH key using subprocess
 subprocess.run(command)
 
 print(f"SSH key generated successfully!\nPublic key: {file_path}.pub")
